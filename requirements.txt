@@ -1,0 +1,8 @@
+flask
+flask-sqlalchemy
+flask-smorest
+flask-migrate
+psycopg2
+gunicorn
+python-dotenv
+
