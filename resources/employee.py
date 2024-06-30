@@ -1,5 +1,4 @@
 import redis, os
-from gevent import monkey
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from models import EmployeeModel
@@ -9,7 +8,6 @@ from db import db
 from task import send_user_registration_email, send_email
 from rq import Queue
 
-monkey.patch_all()
 
 blp = Blueprint("Employee", "employee", description="Operations for Employee")
 
