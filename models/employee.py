@@ -8,4 +8,4 @@ class EmployeeModel(db.Model):
     id = Column(Integer, primary_key=True)
     firstname = Column(String(80),  nullable=False)
     lastname = Column(String(80),  nullable=False)
-    email_id = Column(String(80), unique=False, nullable=False)
+    email_id = Column(String(80), unique=False, nullable=True)
