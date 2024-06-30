@@ -6,4 +6,7 @@ psycopg2
 gunicorn
 python-dotenv
 requests
+rq
+redis
+
 

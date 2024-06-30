@@ -1,15 +1,21 @@
+import os, redis
+
 from flask import Flask
 from flask_smorest import Api
 from dotenv import load_dotenv
 from flask_migrate import Migrate
 from db import db
 from resources.employee import blp as employee_blue_print
-import os
+from rq import Queue
 
 
 def create_app():
     app = Flask(__name__)
     load_dotenv()
+
+    # redis_connection = redis.from_url(os.getenv("REDIS_URL"))
+    # app.queue = Queue("emails", connection=redis_connection)
+
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_VERSION"] = "v1"
     app.config["API_TITLE"] = "My First Postgres Database App"
